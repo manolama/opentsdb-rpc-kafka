@@ -1,6 +1,6 @@
 language: java
 dist: trusty
-script: mvn clean test -q cobertura:cobertura coveralls:report --quiet
+script: export MAVEN_OPTS="-Xmx1024m" && mvn clean -q cobertura:cobertura coveralls:report --quiet
 addons:
   hostname: short-hostname
 jdk:
