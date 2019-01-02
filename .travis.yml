@@ -1,9 +1,8 @@
 language: java
-dist: trusty
-script: export MAVEN_OPTS="-Xmx1024m" && mvn clean -q cobertura:cobertura coveralls:report --quiet
-addons:
-  hostname: short-hostname
+script: mvn clean -q cobertura:cobertura coveralls:report --quiet
 jdk:
   - oraclejdk8
 notifications:
-  email: false
+    email: false
+addons:
+  hostname: short-hostname
