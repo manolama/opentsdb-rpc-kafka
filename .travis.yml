@@ -1,4 +1,5 @@
 language: java
+install: false
 script: mvn clean -q cobertura:cobertura coveralls:report --quiet
 jdk:
   - oraclejdk8
